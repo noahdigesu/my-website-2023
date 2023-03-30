@@ -1,12 +1,18 @@
 import "./Projects.scss";
 
 import Project from "../cards/Project";
+import Filter from "../buttons/Filter";
 
 function Projects() {
 	return (
 		<div className="section-projects" id="work">
-			<div className="filters">
+			<div className="top">
 				<h2 className="title-section">Work</h2>
+				<div className="filters">
+					<Filter text="Design 🎨" active={true} />
+					<Filter text="Code 👨‍💻" active={false} />
+					<Filter text="Articles 🗞" active={false} />
+				</div>
 			</div>
 
 			<div className="projects">
