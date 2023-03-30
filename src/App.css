@@ -10,3 +10,8 @@
   font-family: 'Inter', sans-serif;
   background-color: black;
 }
+
+a {
+  text-decoration: none;
+	color: black;
+}
