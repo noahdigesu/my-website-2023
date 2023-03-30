@@ -9,6 +9,7 @@
 #root {
   font-family: 'Inter', sans-serif;
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 a {

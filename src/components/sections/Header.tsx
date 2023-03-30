@@ -10,7 +10,7 @@ function Header() {
 	return (
 		<header style={{ backgroundImage: `url(${background})` }}>
 			<img src={logo} alt="Logo" />
-			<h2>FullStack / DevOps</h2>
+			<h2 className="title-main">FullStack / DevOps</h2>
 			<Discover />
 			<div className="socials">
 				<Social icon="linkedin" url="https://twitter.com/noahdigesu" />
