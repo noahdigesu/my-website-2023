@@ -17,7 +17,7 @@ function Projects() {
 
 			<div className="projects">
 				<Project
-					name="Smoothey Signup"
+					name="Smoothey signup"
 					year={2023}
 					background_color="#3D396D"
 					image="smoothey_sign_up"
@@ -29,6 +29,14 @@ function Projects() {
 					year={2022}
 					background_color="#F4FAFF"
 					image="testing_dashboard"
+					scheme="dark"
+					url=""
+				/>
+				<Project
+					name="Portfolio"
+					year={2021}
+					background_color="#f1d2fb"
+					image="portfolio"
 					scheme="dark"
 					url=""
 				/>

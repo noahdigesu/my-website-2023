@@ -2,6 +2,7 @@ import { Icon } from "@ailibs/feather-react-ts";
 
 import smoothey_sign_up from "../../images/projects/smoothey-sign-up.png";
 import testing_dashboard from "../../images/projects/testing_dashboard.png";
+import portfolio from "../../images/projects/portfolio.png";
 
 import "./Project.scss";
 
@@ -20,6 +21,8 @@ function getImage(image: string) {
 			return smoothey_sign_up;
 		case "testing_dashboard":
 			return testing_dashboard;
+		case "portfolio":
+			return portfolio;
 		default:
 			return smoothey_sign_up;
 	}
@@ -41,7 +44,10 @@ function Project(props: Props) {
 					<Icon name="arrow-up-right" className="icon" />
 				</a>
 			</div>
-			<img src={getImage(props.image)} alt="" className="card-image" />
+			<div
+				style={{ backgroundImage: `url(${getImage(props.image)})` }}
+				className="card-image"
+			/>
 		</div>
 	);
 }
