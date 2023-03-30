@@ -16,8 +16,15 @@ header {
 	font-size: 2.2em;
 }
 
-.socials {
+.actions {
 	display: flex;
-	flex-direction: row;
-	gap: 20px;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 1.2em;
+
+	.socials {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
 }

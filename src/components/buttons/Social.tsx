@@ -9,11 +9,14 @@ interface Props {
 
 function Social(props: Props) {
 	return (
-		<>
-			<a className="button-social" href={props.url} target="_blank" rel="noopener noreferrer">
-				<Icon name={props.icon} className="icon" />
-			</a>
-		</>
+		<a
+			className="button-social"
+			href={props.url}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<Icon name={props.icon} className="icon" />
+		</a>
 	);
 }
 
