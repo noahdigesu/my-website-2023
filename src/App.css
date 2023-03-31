@@ -10,19 +10,13 @@ html {
 	scroll-behavior: smooth;
 }
 
-#root {
-	font-family: "Inter", sans-serif;
+body {
 	background-color: black;
 }
 
-#fade {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	inset: 0;
-	z-index: 999;
-	background-color: black;
-	animation: fade-out 2s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+#root {
+	font-family: "Inter", sans-serif;
+	animation: fade-in 2s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 
 a {
@@ -30,12 +24,11 @@ a {
 	color: black;
 }
 
-@keyframes fade-out {
+@keyframes fade-in {
 	from {
-		opacity: 1;
+		opacity: 0;
 	}
 	to {
-		opacity: 0;
-		position: unset;
+		opacity: 1;
 	}
 }

@@ -4,10 +4,11 @@
 	height: 280px;
 	width: 400px;
 	padding: 30px;
-	transition: box-shadow .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transform: translate3d(0, 10%, 0);
+	transition: box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	&:hover {
-		box-shadow: inset 0px 0px 0px 5px rgba(0,0,0,0.4);
+		box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.4);
 	}
 
 	&:hover .card-image {
@@ -93,5 +94,16 @@
 		background-repeat: no-repeat;
 		margin-top: 2.2em;
 		transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+}
+
+@keyframes slide-t-b {
+	from {
+		transform: translate3d(0, 10%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
 	}
 }
