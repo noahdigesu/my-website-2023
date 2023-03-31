@@ -56,7 +56,7 @@
 
 			.card-year {
 				width: fit-content;
-				background-color: rgba(0, 0, 0, 0.4);
+				background-color: rgba(28, 28, 28, 0.4);
 				color: white;
 				font-weight: 500;
 				border-radius: 9px;
@@ -91,7 +91,6 @@
 		background-size: contain;
 		background-position: top center;
 		background-repeat: no-repeat;
-		z-index: -1;
 		margin-top: 2.2em;
 		transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 	}

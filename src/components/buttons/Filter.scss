@@ -18,4 +18,14 @@
             opacity: .8;
         }
     }
+
+    &.light {
+        color: black;
+        border: 1px solid #ECF0FF;
+        background: linear-gradient(180deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.3) 100%);
+    }
+
+    &.dark {
+
+    }
 }

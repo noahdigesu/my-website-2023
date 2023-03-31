@@ -1,9 +1,9 @@
-import './Skills.scss';
+import "./Skills.scss";
 
-import background from '../../images/backgrounds/footer.svg';
+import background from "../../images/backgrounds/footer.svg";
 
-import Filter from '../buttons/Filter';
-import Skill from '../cards/Skill';
+import Filter from "../buttons/Filter";
+import Skill from "../cards/Skill";
 
 function Skills() {
 	return (
@@ -14,49 +14,81 @@ function Skills() {
 			<div className="top">
 				<h2 className="title-section">Skills</h2>
 				<div className="filters">
-					<Filter text="Languages and frameworks 🤖" active={true} />
-					<Filter text="Tools and technologies 🧰" active={false} />
-					<Filter text="Methodologies 📜" active={false} />
+					<Filter
+						text="Languages and frameworks 🤖"
+						active={true}
+						theme="light"
+					/>
+					<Filter
+						text="Tools and technologies 🧰"
+						active={false}
+						theme="light"
+					/>
+					<Filter
+						text="Methodologies 📜"
+						active={false}
+						theme="light"
+					/>
 				</div>
 			</div>
 
 			<div className="skills">
 				<Skill
 					name="Laravel"
-					category="Languages and frameworks"
+					category="l-a-f"
 					type="Web"
 					icon="laravel"
 				/>
 				<Skill
-					name="Laravel"
-					category="Languages and frameworks"
+					name="JavaScript"
+					category="l-a-f"
 					type="Web"
-					icon="laravel"
+					icon="js"
+				/>
+				<Skill name="SASS" category="l-a-f" type="Web" icon="sass" />
+				<Skill name="SQL" category="l-a-f" type="Web" icon="none" />
+				<Skill name="PHP" category="l-a-f" type="Web" icon="php" />
+				<Skill
+					name="Spring"
+					category="l-a-f"
+					type="Web"
+					icon="spring"
 				/>
 				<Skill
-					name="Laravel"
-					category="Languages and frameworks"
+					name="Django"
+					category="l-a-f"
 					type="Web"
-					icon="laravel"
+					icon="django"
+				/>
+				<Skill name="Node.js" category="l-a-f" type="Web" icon="node" />
+				<Skill
+					name="REST APIs"
+					category="l-a-f"
+					type="Web"
+					icon="none"
+				/>
+				<Skill name="Jest" category="l-a-f" type="Web" icon="jest" />
+				<Skill
+					name="WebdriverIO"
+					category="l-a-f"
+					type="Web"
+					icon="webdriverio"
 				/>
 				<Skill
-					name="Laravel"
-					category="Languages and frameworks"
+					name="Kotlin"
+					category="l-a-f"
 					type="Web"
-					icon="laravel"
+					icon="kotlin"
 				/>
+				<Skill name="Java" category="l-a-f" type="Web" icon="java" />
+				<Skill name="Bash" category="l-a-f" type="Web" icon="bash" />
+				<Skill name="C++" category="l-a-f" type="Web" icon="cpp" />
+				<Skill name="C" category="l-a-f" type="Web" icon="c" />
 				<Skill
-					name="Laravel"
-					category="Languages and frameworks"
+					name="Python"
+					category="l-a-f"
 					type="Web"
-					icon="laravel"
-				/>
-
-				<Skill
-					name="Laravel"
-					category="Languages and frameworks"
-					type="Web"
-					icon="laravel"
+					icon="python"
 				/>
 			</div>
 		</div>

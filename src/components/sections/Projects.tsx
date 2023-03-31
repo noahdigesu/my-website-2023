@@ -9,9 +9,9 @@ function Projects() {
 			<div className="top">
 				<h2 className="title-section">Work</h2>
 				<div className="filters">
-					<Filter text="Design 🎨" active={true} />
-					<Filter text="Code 👨‍💻" active={false} />
-					<Filter text="Articles 🗞" active={false} />
+					<Filter text="Design 🎨" active={true} theme="dark" />
+					<Filter text="Code 👨‍💻" active={false} theme="dark" />
+					<Filter text="Articles 🗞" active={false} theme="dark" />
 				</div>
 			</div>
 
