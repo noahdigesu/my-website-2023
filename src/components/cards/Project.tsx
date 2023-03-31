@@ -1,9 +1,5 @@
 import { Icon } from "@ailibs/feather-react-ts";
 
-import smoothey_sign_up from "../../images/projects/smoothey-sign-up.png";
-import testing_dashboard from "../../images/projects/testing_dashboard.png";
-import portfolio from "../../images/projects/portfolio.png";
-
 import "./Project.scss";
 
 interface Props {
@@ -11,27 +7,14 @@ interface Props {
 	year: number;
 	background_color: string;
 	image: string;
-	scheme: "dark" | "light";
+	theme: string;
 	url: string;
-}
-
-function getImage(image: string) {
-    switch (image) {
-		case "smoothey_sign_up":
-			return smoothey_sign_up;
-		case "testing_dashboard":
-			return testing_dashboard;
-		case "portfolio":
-			return portfolio;
-		default:
-			return smoothey_sign_up;
-	}
 }
 
 function Project(props: Props) {
 	return (
 		<div
-			className={`card ${props.scheme}`}
+			className={`card ${props.theme}`}
 			style={{ backgroundColor: props.background_color }}
 		>
 			<div className="card-top">
@@ -45,7 +28,9 @@ function Project(props: Props) {
 				</a>
 			</div>
 			<div
-				style={{ backgroundImage: `url(${getImage(props.image)})` }}
+				style={{
+					backgroundImage: `url(/images/projects/${props.image}.png)`,
+				}}
 				className="card-image"
 			/>
 		</div>
