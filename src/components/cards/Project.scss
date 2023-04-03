@@ -5,8 +5,7 @@
   width: 400px;
   padding: 30px;
   transform: translate3d(0, 10%, 0);
-  transition: box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  // animation: slide-t-b 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   &:hover {
     box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.4);
@@ -93,7 +92,7 @@
     background-position: top center;
     background-repeat: no-repeat;
     margin-top: 2.2em;
-    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 
