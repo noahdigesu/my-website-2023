@@ -29,7 +29,7 @@ function Header() {
                 <motion.div className="socials"
                             initial="hidden"
                             animate="visible"
-                            transition={{staggerChildren: 0.3, delayChildren: 1}}>
+                            transition={{staggerChildren: 0.3, delayChildren: .5}}>
                     <motion.div variants={social}>
                         <Social
                             icon="linkedin"

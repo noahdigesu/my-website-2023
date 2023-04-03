@@ -1,6 +1,7 @@
 import "./Projects.scss";
 
 import {motion} from "framer-motion";
+import React from "react";
 
 import Project from "../cards/Project";
 import Filter from "../buttons/Filter";
@@ -19,7 +20,7 @@ const variants = {
     }),
 }
 
-const projects = [
+const portfolio = [
     {
         name: "Smoothey signup",
         year: 2023,
@@ -27,6 +28,7 @@ const projects = [
         image: "smoothey-sign-up",
         theme: "light",
         url: "",
+        category: ["design", "code"]
     },
     {
         name: "Testing dashboard",
@@ -35,6 +37,7 @@ const projects = [
         image: "testing-dashboard",
         theme: "dark",
         url: "",
+        category: ["design"]
     },
     {
         name: "Portfolio",
@@ -43,6 +46,7 @@ const projects = [
         image: "portfolio",
         theme: "dark",
         url: "",
+        category: ["design", "code"]
     },
 ];
 
@@ -52,8 +56,8 @@ function Projects() {
             <div className="top">
                 <h2 className="title">Work</h2>
                 <div className="filters">
-                    <Filter text="Design 🎨" active={true} theme="dark"/>
-                    <Filter text="Code 👨‍💻" active={false} theme="dark"/>
+                    <Filter text="Code 👨‍💻" active={true} theme="dark"/>
+                    <Filter text="Design 🎨" active={false} theme="dark"/>
                     <Filter text="Articles 🗞" active={false} theme="dark"/>
                 </div>
             </div>
@@ -63,7 +67,7 @@ function Projects() {
                         whileInView="visible"
                         variants={variants}
                         viewport={{once: true, margin: "-150px 0px -150px 0px"}}>
-                {projects.map((project, i) => (
+                {portfolio.map((project, i) => (
                     <motion.div custom={i}
                                 variants={variants}>
                         <Project
