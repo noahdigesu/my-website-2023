@@ -11,11 +11,24 @@ import background from "../../images/backgrounds/header.svg";
 const social = {
     hidden: {
         opacity: 0,
-        y: -20
+        y: -20,
+        display: "inherit"
     },
     visible: {
         opacity: 1,
-        y: 0
+        y: 0,
+        display: "inherit"
+    },
+}
+
+const fade = {
+    hidden: {
+        opacity: 0,
+        display: "inherit"
+    },
+    visible: {
+        opacity: 1,
+        display: "inherit"
     },
 }
 
@@ -23,13 +36,19 @@ function Header() {
     return (
         <header style={{backgroundImage: `url(${background})`}}>
             <img src={logo} alt="Logo"/>
-            <h2 className="title-main">FullStack / DevOps</h2>
+            <h2 className="title-main">FullStack / DevOps
+            </h2>
             <div className="actions">
-                <Discover/>
+                <motion.div initial="hidden"
+                            animate="visible"
+                            variants={fade}
+                            transition={{delay: 1.5}}>
+                    <Discover/>
+                </motion.div>
                 <motion.div className="socials"
                             initial="hidden"
                             animate="visible"
-                            transition={{staggerChildren: 0.3, delayChildren: .5}}>
+                            transition={{staggerChildren: 0.3, delayChildren: 2}}>
                     <motion.div variants={social}>
                         <Social
                             icon="linkedin"
