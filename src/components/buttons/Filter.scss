@@ -1,31 +1,32 @@
 .filter {
-    color: white;
-    border: 1px solid #1c1c1c;
-    border-radius: 13px;
-    padding: 8px 22px;
-    cursor: pointer;
-    font-size: .9em;
-    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+  color: white;
+  border: 1px solid #1c1c1c;
+  border-radius: 13px;
+  padding: 8px 22px;
+  cursor: pointer;
+  font-size: .9em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
 
-    &.active {
-        // border here
+  &.active {
+    // border here
+  }
+
+  &.inactive {
+    opacity: .6;
+    transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+      opacity: .8;
     }
-    &.inactive {
-        opacity: .6;
-        transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
 
-        &:hover {
-            opacity: .8;
-        }
-    }
+  &.light {
+    color: black;
+    border: 1px solid #ECF0FF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.3) 100%);
+  }
 
-    &.light {
-        color: black;
-        border: 1px solid #ECF0FF;
-        background: linear-gradient(180deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.3) 100%);
-    }
+  &.dark {
 
-    &.dark {
-
-    }
+  }
 }

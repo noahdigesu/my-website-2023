@@ -1,40 +1,40 @@
 .button-social {
-	border: 1px solid white;
-	border-radius: 15px;
-	background: linear-gradient(
-		180deg,
-		rgba(255, 255, 255, 0.3) 0%,
-		rgba(255, 255, 255, 0.1) 100%
-	);
-	backdrop-filter: blur(3px);
-	height: 55px;
-    width: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: backdrop-filter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	opacity: 0;
-	animation: slide-b-t .7s .8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.3) 0%,
+                  rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(3px);
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: backdrop-filter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  //opacity: 0;
+  // animation: slide-b-t .7s .8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 
-    &:hover {
-        backdrop-filter: blur(10px);
-    }
+  &:hover {
+    backdrop-filter: blur(10px);
+  }
 
-	.icon {
-		color: #40424e;
-		stroke-width: 1.5px;
-		height: 1.2em;
-        vertical-align: middle;
-	}
+  .icon {
+    color: #40424e;
+    stroke-width: 1.5px;
+    height: 1.2em;
+    vertical-align: middle;
+  }
 }
 
 @keyframes slide-b-t {
-	from {
-		transform: translate3d(0, -40%, 0);
-	}
+  from {
+    transform: translate3d(0, -40%, 0);
+  }
 
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

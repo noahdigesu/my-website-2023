@@ -1,30 +1,30 @@
 header {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	row-gap: 2em;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  row-gap: 2em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .title-main {
-	font-family: "Poppins", sans-serif;
-	font-weight: 500;
-	font-size: 2.2em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.2em;
 }
 
 .actions {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.2em;
 
-	.socials {
-		display: flex;
-		flex-direction: row;
-		gap: 20px;
-	}
+  .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }

@@ -1,41 +1,42 @@
 .skill {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 35px 35px;
-	gap: 10px;
-	transform: translate3d(0, 20%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 35px;
+  gap: 10px;
+  transform: translate3d(0, 20%, 0);
+  // animation: slide-b-t 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 
-	.skill-icon {
-		width: 3em;
-	}
+  .skill-icon {
+    width: 3em;
+  }
 
-	.skill-name {
-		font-weight: 500;
-	}
+  .skill-name {
+    font-weight: 500;
+  }
 
-	.skill-type {
-		border-radius: 11px;
-		padding: 5px 15px;
-		font-size: 0.9em;
-		border: 1px solid #ecf0ff;
-		backdrop-filter: blur(2px);
-		background: linear-gradient(
-			180deg,
-			rgba(255, 255, 255, 0.65) 0%,
-			rgba(255, 255, 255, 0.3) 100%
-		);
-		cursor: default;
-	}
+  .skill-type {
+    border-radius: 11px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    border: 1px solid #ecf0ff;
+    backdrop-filter: blur(2px);
+    background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.65) 0%,
+                    rgba(255, 255, 255, 0.3) 100%
+    );
+    cursor: default;
+  }
 }
 
 @keyframes slide-b-t {
-	from {
-		transform: translate3d(0, 20%, 0);
-	}
+  from {
+    transform: translate3d(0, 20%, 0);
+  }
 
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

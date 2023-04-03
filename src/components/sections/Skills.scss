@@ -1,36 +1,36 @@
 .section-skills {
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	gap: 40px;
-	padding: 10em 0 5em 0;
-	flex-direction: column;
-	align-items: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  gap: 40px;
+  padding: 10em 0 5em 0;
+  flex-direction: column;
+  align-items: center;
 
-	.top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
-		.title {
-			font-family: "Poppins", sans-serif;
-			font-weight: 600;
-			font-size: 3em;
-		}
+    .title {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 3em;
+    }
 
-		.filters {
-			display: flex;
-			flex-direction: row;
-			gap: 15px;
-		}
-	}
+    .filters {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
 
-	.skills {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-column-gap: 40px;
-		grid-row-gap: 20px;
-	}
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+  }
 }

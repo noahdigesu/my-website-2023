@@ -1,109 +1,109 @@
 .card {
-	overflow: hidden;
-	border-radius: 1.7em;
-	height: 280px;
-	width: 400px;
-	padding: 30px;
-	transform: translate3d(0, 10%, 0);
-	transition: box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  border-radius: 1.7em;
+  height: 280px;
+  width: 400px;
+  padding: 30px;
+  transform: translate3d(0, 10%, 0);
+  transition: box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  // animation: slide-t-b 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 
-	&:hover {
-		box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.4);
-	}
+  &:hover {
+    box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.4);
+  }
 
-	&:hover .card-image {
-		transform: translate3d(0, -1.5em, 0);
-	}
+  &:hover .card-image {
+    transform: translate3d(0, -1.5em, 0);
+  }
 
-	&.dark {
-		color: black;
+  &.dark {
+    color: black;
 
-		.card-link {
-			background-color: rgb(0, 0, 0);
+    .card-link {
+      background-color: rgb(0, 0, 0);
 
-			.icon {
-				color: white;
-			}
-		}
-	}
+      .icon {
+        color: white;
+      }
+    }
+  }
 
-	&.light {
-		color: white;
+  &.light {
+    color: white;
 
-		.card-link {
-			background-color: white;
+    .card-link {
+      background-color: white;
 
-			.icon {
-				color: black;
-			}
-		}
-	}
+      .icon {
+        color: black;
+      }
+    }
+  }
 
-	.card-top {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+  .card-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-		.card-info {
-			display: flex;
-			flex-direction: column;
-			gap: 5px;
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
 
-			.card-title {
-				font-family: "Poppins", sans-serif;
-				font-weight: 600;
-				font-size: 1.4em;
-			}
+      .card-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.4em;
+      }
 
-			.card-year {
-				width: fit-content;
-				background-color: rgba(28, 28, 28, 0.4);
-				color: white;
-				font-weight: 500;
-				border-radius: 9px;
-				font-size: 0.8em;
-				padding: 8px 18px;
-			}
-		}
+      .card-year {
+        width: fit-content;
+        background-color: rgba(28, 28, 28, 0.4);
+        color: white;
+        font-weight: 500;
+        border-radius: 9px;
+        font-size: 0.8em;
+        padding: 8px 18px;
+      }
+    }
 
-		.card-link {
-			border-radius: 13px;
-			height: 40px;
-			width: 40px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+    .card-link {
+      border-radius: 13px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-			.icon {
-				height: 1.1em;
-				transition: transform 0.3s
-					cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			}
+      .icon {
+        height: 1.1em;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
 
-			&:hover .icon {
-				transform: translate3d(10%, -10%, 0);
-			}
-		}
-	}
+      &:hover .icon {
+        transform: translate3d(10%, -10%, 0);
+      }
+    }
+  }
 
-	.card-image {
-		width: 100%;
-		height: 120%;
-		background-size: contain;
-		background-position: top center;
-		background-repeat: no-repeat;
-		margin-top: 2.2em;
-		transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-	}
+  .card-image {
+    width: 100%;
+    height: 120%;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: 2.2em;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
 }
 
 @keyframes slide-t-b {
-	from {
-		transform: translate3d(0, 10%, 0);
-	}
+  from {
+    transform: translate3d(0, 10%, 0);
+  }
 
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
