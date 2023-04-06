@@ -11,9 +11,9 @@ function Filter(props: Props) {
     const [isActive, setActive] = useState(props.active);
 
     return (
-        <span className={`filter ${isActive ? "active" : "inactive"} ${props.theme}`}
-              onClick={() => setActive(!isActive)}>
-			{props.text}
+        <span className={`filter ${props.active ? "active" : "inactive"} ${props.theme}`}
+              onClick={() => setActive(!props.active)}>
+            {props.text}
 		</span>
     );
 }

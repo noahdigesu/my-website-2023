@@ -6,6 +6,7 @@ import {motion} from "framer-motion";
 
 import Filter from "../buttons/Filter";
 import Skill from "../cards/Skill";
+import {useState} from "react";
 
 const variants = {
     hidden: {
@@ -47,6 +48,8 @@ const skills = [
 ];
 
 function Skills() {
+    const [filter, setFilter] = useState("l-a-f");
+
     return (
         <div
             className="section-skills"
@@ -55,21 +58,33 @@ function Skills() {
             <div className="top">
                 <h2 className="title">Skills</h2>
                 <div className="filters">
-                    <Filter
-                        text="Languages and frameworks 🤖"
-                        active={true}
-                        theme="light"
-                    />
-                    <Filter
-                        text="Tools and technologies 🧰"
-                        active={false}
-                        theme="light"
-                    />
-                    <Filter
-                        text="Methodologies 📜"
-                        active={false}
-                        theme="light"
-                    />
+                    <div onClick={() => {
+                        if (filter != "code") setFilter("l-a-f")
+                    }}>
+                        <Filter
+                            text="Languages and frameworks 🤖"
+                            active={filter == "l-a-f"}
+                            theme="light"
+                        />
+                    </div>
+                    <div onClick={() => {
+                        if (filter != "code") setFilter("t-a-t")
+                    }}>
+                        <Filter
+                            text="Tools and technologies 🧰"
+                            active={filter == "t-a-t"}
+                            theme="light"
+                        />
+                    </div>
+                    <div onClick={() => {
+                        if (filter != "code") setFilter("methodologies")
+                    }}>
+                        <Filter
+                            text="Methodologies 📜"
+                            active={filter == "methodologies"}
+                            theme="light"
+                        />
+                    </div>
                 </div>
             </div>
 

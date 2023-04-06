@@ -1,10 +1,21 @@
 import "./Projects.scss";
 
 import {motion} from "framer-motion";
-import React from "react";
+import React, {useState} from "react";
 
 import Project from "../cards/Project";
 import Filter from "../buttons/Filter";
+
+// interface project {
+//     name: string,
+//     year: number,
+//     background_color: string,
+//     image: string,
+//     theme: string,
+//     url: string,
+//     category: string[],
+//     filtered: boolean
+// }
 
 const variants = {
     hidden: {
@@ -28,7 +39,8 @@ const portfolio = [
         image: "smoothey-sign-up",
         theme: "light",
         url: "",
-        category: ["design", "code"]
+        category: ["design", "code"],
+        filtered: true
     },
     {
         name: "Testing dashboard",
@@ -37,7 +49,8 @@ const portfolio = [
         image: "testing-dashboard",
         theme: "dark",
         url: "",
-        category: ["design"]
+        category: ["design"],
+        filtered: true
     },
     {
         name: "Portfolio",
@@ -46,19 +59,44 @@ const portfolio = [
         image: "portfolio",
         theme: "dark",
         url: "",
-        category: ["design", "code"]
+        category: ["design", "code"],
+        filtered: true
     },
 ];
 
+// const [projects, setProjects] = useState(portfolio);
+
+// useEffect(() => {
+//     setProjects(portfolio);
+// }, []);
+
+// useEffect(() => {
+//     setProjects([]);
+//
+//     const filtered = portfolio.map(p => ({
+//         ...p,
+//         filtered: p.category.includes(filter)
+//     }));
+//     setProjects(filtered);
+// }, [filter]);
+
 function Projects() {
+    const [filter, setFilter] = useState("code");
+
     return (
         <div className="section-projects" id="work">
             <div className="top">
                 <h2 className="title">Work</h2>
                 <div className="filters">
-                    <Filter text="Code 👨‍💻" active={true} theme="dark"/>
-                    <Filter text="Design 🎨" active={false} theme="dark"/>
-                    <Filter text="Articles 🗞" active={false} theme="dark"/>
+                    <div onClick={() => {if (filter != "code") setFilter("code")}}>
+                        <Filter text="Code 👨‍💻" active={filter == "code"} theme="dark"/>
+                    </div>
+                    <div onClick={() => setFilter("design")}>
+                        <Filter text="Design 🎨" active={filter == "design"} theme="dark"/>
+                    </div>
+                    <div onClick={() => setFilter("article")}>
+                        <Filter text="Articles 🗞" active={filter == "article"} theme="dark"/>
+                    </div>
                 </div>
             </div>
 
@@ -69,7 +107,8 @@ function Projects() {
                         viewport={{once: true, margin: "-150px 0px -150px 0px"}}>
                 {portfolio.map((project, i) => (
                     <motion.div custom={i}
-                                variants={variants}>
+                                variants={variants}
+                                key={i}>
                         <Project
                             name={project.name}
                             year={project.year}

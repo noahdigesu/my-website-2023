@@ -28,7 +28,7 @@ const fade = {
     },
     visible: {
         opacity: 1,
-        display: "inherit"
+        display: "inherit",
     },
 }
 
@@ -36,19 +36,19 @@ function Header() {
     return (
         <header style={{backgroundImage: `url(${background})`}}>
             <img src={logo} alt="Logo"/>
-            <h2 className="title-main">FullStack / DevOps
+            <h2 className="title-main">FullStack | DevOps
             </h2>
             <div className="actions">
                 <motion.div initial="hidden"
                             animate="visible"
                             variants={fade}
-                            transition={{delay: 1.5}}>
+                            transition={{delay: .7}}>
                     <Discover/>
                 </motion.div>
                 <motion.div className="socials"
                             initial="hidden"
                             animate="visible"
-                            transition={{staggerChildren: 0.3, delayChildren: 2}}>
+                            transition={{staggerChildren: 0.3, delayChildren: 1.5}}>
                     <motion.div variants={social}>
                         <Social
                             icon="linkedin"
