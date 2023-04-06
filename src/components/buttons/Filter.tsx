@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import "./Filter.scss";
 
 interface Props {
@@ -9,10 +9,14 @@ interface Props {
 
 function Filter(props: Props) {
     const [isActive, setActive] = useState(props.active);
+    useEffect(() => {
+        setActive(props.active)
+    }, [props.active]);
+
 
     return (
-        <span className={`filter ${props.active ? "active" : "inactive"} ${props.theme}`}
-              onClick={() => setActive(!props.active)}>
+        <span className={`filter ${isActive ? "active" : "inactive"} ${props.theme}`}
+              onClick={() => setActive(!isActive)}>
             {props.text}
 		</span>
     );
