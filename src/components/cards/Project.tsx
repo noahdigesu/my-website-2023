@@ -6,6 +6,7 @@ interface Props {
     name: string;
     year: number;
     background_color: string;
+    accent: string;
     image: string;
     theme: string;
     url: string;
@@ -20,10 +21,10 @@ function Project(props: Props) {
             <div className="card-top">
                 <div className="card-info">
                     <h3 className="card-title">{props.name}</h3>
-                    <span className="card-year">{props.year}</span>
+                    <span className="card-year" style={{backgroundColor: props.accent}}>{props.year}</span>
                 </div>
-
-                <a href={props.url} className="card-link" target="_blank">
+                <a href={props.url} className="card-link" target="_blank"
+                   style={{display: props.url ? "flex" : "none"}}>
                     <Icon name="arrow-up-right" className="icon"/>
                 </a>
             </div>

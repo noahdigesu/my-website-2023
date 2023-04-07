@@ -25,6 +25,7 @@ const portfolio = [
         name: "Smoothey signup",
         year: 2023,
         background_color: "#3D396D",
+        accent: "#252448",
         image: "smoothey-sign-up",
         theme: "light",
         url: "https://smoothey.app",
@@ -35,6 +36,7 @@ const portfolio = [
         name: "Testing dashboard",
         year: 2022,
         background_color: "#F4FAFF",
+        accent: "#6A6E72",
         image: "testing-dashboard",
         theme: "dark",
         url: "https://dribbble.com/shots/20449135-Testing-dashboard",
@@ -45,12 +47,24 @@ const portfolio = [
         name: "Portfolio",
         year: 2021,
         background_color: "#f1d2fb",
+        accent: "#d2a1de",
         image: "portfolio",
         theme: "dark",
-        url: "javascript:void()",
+        url: "",
         category: ["design", "code"],
         filtered: true
     },
+    {
+        name: "Links",
+        year: 2022,
+        background_color: "#f4ffaf",
+        accent: "#8a8c61",
+        image: "links",
+        theme: "dark",
+        url: "https://noahdigesu.com/links",
+        category: ["design", "code"],
+        filtered: true
+    }
 ];
 
 function Projects() {
@@ -82,9 +96,6 @@ function Projects() {
                     <div onClick={() => setFilter("design")}>
                         <Filter text="Design 🎨" active={filter == "design"} theme="dark"/>
                     </div>
-                    <div onClick={() => setFilter("article")}>
-                        <Filter text="Articles 🗞" active={filter == "article"} theme="dark"/>
-                    </div>
                 </div>
             </div>
 
@@ -101,11 +112,13 @@ function Projects() {
                             <motion.div custom={i}
                                         variants={variants}
                                         key={i}
-                                        layout>
+                                        layout
+                                        exit={{opacity: 0, y: 20}}>
                                 <Project
                                     name={project.name}
                                     year={project.year}
                                     background_color={project.background_color}
+                                    accent={project.accent}
                                     image={project.image}
                                     theme={project.theme}
                                     url={project.url}
