@@ -27,7 +27,7 @@ const portfolio = [
         background_color: "#3D396D",
         image: "smoothey-sign-up",
         theme: "light",
-        url: "",
+        url: "https://smoothey.app",
         category: ["design", "code"],
         filtered: true
     },
@@ -37,7 +37,7 @@ const portfolio = [
         background_color: "#F4FAFF",
         image: "testing-dashboard",
         theme: "dark",
-        url: "",
+        url: "https://dribbble.com/shots/20449135-Testing-dashboard",
         category: ["design"],
         filtered: true
     },
@@ -47,7 +47,7 @@ const portfolio = [
         background_color: "#f1d2fb",
         image: "portfolio",
         theme: "dark",
-        url: "",
+        url: "javascript:void()",
         category: ["design", "code"],
         filtered: true
     },

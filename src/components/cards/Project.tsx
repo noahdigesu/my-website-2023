@@ -23,7 +23,7 @@ function Project(props: Props) {
                     <span className="card-year">{props.year}</span>
                 </div>
 
-                <a href={props.url} className="card-link">
+                <a href={props.url} className="card-link" target="_blank">
                     <Icon name="arrow-up-right" className="icon"/>
                 </a>
             </div>
