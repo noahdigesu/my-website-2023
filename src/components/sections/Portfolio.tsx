@@ -1,21 +1,10 @@
 import "./Projects.scss";
 
-import {motion} from "framer-motion";
-import React, {useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
+import React, {useEffect, useState} from "react";
 
 import Project from "../cards/Project";
 import Filter from "../buttons/Filter";
-
-// interface project {
-//     name: string,
-//     year: number,
-//     background_color: string,
-//     image: string,
-//     theme: string,
-//     url: string,
-//     category: string[],
-//     filtered: boolean
-// }
 
 const variants = {
     hidden: {
@@ -27,8 +16,8 @@ const variants = {
         y: 0,
         transition: {
             delay: i * 0.2,
-        },
-    }),
+        }
+    })
 }
 
 const portfolio = [
@@ -64,31 +53,30 @@ const portfolio = [
     },
 ];
 
-// const [projects, setProjects] = useState(portfolio);
-
-// useEffect(() => {
-//     setProjects(portfolio);
-// }, []);
-
-// useEffect(() => {
-//     setProjects([]);
-//
-//     const filtered = portfolio.map(p => ({
-//         ...p,
-//         filtered: p.category.includes(filter)
-//     }));
-//     setProjects(filtered);
-// }, [filter]);
-
 function Projects() {
     const [filter, setFilter] = useState("code");
+    const [projects, setProjects] = useState(portfolio);
+
+    useEffect(() => {
+        setProjects(portfolio);
+    }, []);
+
+    useEffect(() => {
+        setProjects([]);
+
+        const filtered = portfolio.map(p => ({
+            ...p,
+            filtered: p.category.includes(filter)
+        }));
+        setProjects(filtered);
+    }, [filter]);
 
     return (
         <div className="section-projects" id="work">
             <div className="top">
                 <h2 className="title">Work</h2>
                 <div className="filters">
-                    <div onClick={() => {if (filter != "code") setFilter("code")}}>
+                    <div onClick={() => setFilter("code")}>
                         <Filter text="Code 👨‍💻" active={filter == "code"} theme="dark"/>
                     </div>
                     <div onClick={() => setFilter("design")}>
@@ -102,23 +90,30 @@ function Projects() {
 
             <motion.div className="projects"
                         initial="hidden"
-                        whileInView="visible"
+                // whileInView="visible"
+                        animate="visible"
                         variants={variants}
-                        viewport={{once: true, margin: "-150px 0px -150px 0px"}}>
-                {portfolio.map((project, i) => (
-                    <motion.div custom={i}
-                                variants={variants}
-                                key={i}>
-                        <Project
-                            name={project.name}
-                            year={project.year}
-                            background_color={project.background_color}
-                            image={project.image}
-                            theme={project.theme}
-                            url={project.url}
-                        />
-                    </motion.div>
-                ))}
+                // viewport={{once: true, margin: "-150px 0px -150px 0px"}}
+            >
+                <AnimatePresence>
+                    {projects.map((project, i) =>
+                        project.filtered ? (
+                            <motion.div custom={i}
+                                        variants={variants}
+                                        key={i}
+                                        layout>
+                                <Project
+                                    name={project.name}
+                                    year={project.year}
+                                    background_color={project.background_color}
+                                    image={project.image}
+                                    theme={project.theme}
+                                    url={project.url}
+                                />
+                            </motion.div>
+                        ) : ""
+                    )}
+                </AnimatePresence>
             </motion.div>
         </div>
     );

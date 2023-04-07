@@ -95,7 +95,8 @@ function Skills() {
                         viewport={{once: true, margin: "-150px 0px -150px 0px"}}>
                 {skills.map((skill, i) => (
                     <motion.div custom={i}
-                                variants={variants}>
+                                variants={variants}
+                                key={i}>
                         <Skill
                             name={skill.name}
                             category={skill.category}
