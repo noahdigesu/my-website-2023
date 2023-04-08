@@ -128,7 +128,7 @@ function Skills() {
                     {_skills.map((skill, i) => (
                         <motion.div custom={i}
                                     variants={variants}
-                                    key={i}>
+                                    key={skill.name + i}>
                             <Skill
                                 name={skill.name}
                                 type={skill.type}

@@ -111,7 +111,7 @@ function Projects() {
                         project.filtered ? (
                             <motion.div custom={i}
                                         variants={variants}
-                                        key={i}
+                                        key={project.name + i}
                                         layout
                                         exit={{opacity: 0, y: 20}}>
                                 <Project
