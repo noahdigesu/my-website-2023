@@ -28,8 +28,9 @@ header {
   }
 }
 
-@media only screen and (max-width: 768px) {
+// Tablet (vertical)
+@media only screen and (max-width: 1024px) {
   header {
-    background-size: auto;
+    background-size: cover;
   }
 }

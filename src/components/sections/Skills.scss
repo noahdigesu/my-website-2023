@@ -35,6 +35,7 @@
   }
 }
 
+// Phone
 @media only screen and (max-width: 768px) {
   .section-skills {
     background-size: auto;
@@ -52,6 +53,19 @@
     .skills {
       grid-template-columns: repeat(2, 1fr);
       margin-top: 1em;
+    }
+  }
+}
+
+// Tablet (vertical)
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .section-skills {
+    background-size: auto;
+    padding: 7em 0 0 0;
+    background-color: #daf2f5;
+
+    .skills {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
