@@ -15,7 +15,7 @@ const variants = {
     },
     visible: (i: number) => ({
         opacity: 1,
-        y: 0,
+        y: -20,
         transition: {
             delay: i * 0.1,
         },
@@ -39,26 +39,26 @@ const skills = [
         icon: "webdriverio",
         filtered: true
     },
+    {name: "SQL", category: ["l-a-f"], type: "Database", icon: "none", filtered: true},
     {name: "Kotlin", category: ["l-a-f"], type: "App", icon: "kotlin", filtered: true},
-    {name: "SQL", category: ["l-a-f"], type: "Other", icon: "none", filtered: true},
-    {name: "Java", category: ["l-a-f"], type: "Other", icon: "java", filtered: true},
-    {name: "Bash", category: ["l-a-f"], type: "Other", icon: "bash", filtered: true},
-    {name: "C++", category: ["l-a-f"], type: "Other", icon: "cpp", filtered: true},
-    {name: "C", category: ["l-a-f"], type: "Other", icon: "c", filtered: true},
-    {name: "Python", category: ["l-a-f"], type: "Other", icon: "python", filtered: true},
+    {name: "Java", category: ["l-a-f"], type: "Software", icon: "java", filtered: true},
+    {name: "C++", category: ["l-a-f"], type: "Software", icon: "cpp", filtered: true},
+    {name: "C", category: ["l-a-f"], type: "Software", icon: "c", filtered: true},
+    {name: "Bash", category: ["l-a-f"], type: "Scripting", icon: "bash", filtered: true},
+    {name: "Python", category: ["l-a-f"], type: "Scripting", icon: "python", filtered: true},
 
     {name: "Linux", category: ["t-a-t"], type: "OS", icon: "tux", filtered: false},
     {name: "Windows", category: ["t-a-t"], type: "OS", icon: "windows", filtered: false},
-    {name: "AWS", category: ["t-a-t"], type: "Other", icon: "aws", filtered: false},
-    {name: "Docker", category: ["t-a-t"], type: "Other", icon: "docker", filtered: false},
-    {name: "Figma", category: ["t-a-t"], type: "Other", icon: "figma", filtered: false},
-    {name: "GitHub", category: ["t-a-t"], type: "Other", icon: "github", filtered: false},
-    {name: "GitLab", category: ["t-a-t"], type: "Other", icon: "gitlab", filtered: false},
-    {name: "Bitbucket", category: ["t-a-t"], type: "Other", icon: "bitbucket", filtered: false},
-    {name: "Confluence", category: ["t-a-t"], type: "Other", icon: "confluence", filtered: false},
-    {name: "Jira", category: ["t-a-t"], type: "Other", icon: "jira", filtered: false},
-    {name: "Ansible", category: ["t-a-t"], type: "Other", icon: "ansible", filtered: false},
-    {name: "Adobe XD", category: ["t-a-t"], type: "Other", icon: "xd", filtered: false},
+    {name: "AWS", category: ["t-a-t"], type: "Cloud", icon: "aws", filtered: false},
+    {name: "Figma", category: ["t-a-t"], type: "Design", icon: "figma", filtered: false},
+    {name: "GitHub", category: ["t-a-t"], type: "VCS", icon: "github", filtered: false},
+    {name: "GitLab", category: ["t-a-t"], type: "VCS", icon: "gitlab", filtered: false},
+    {name: "Bitbucket", category: ["t-a-t"], type: "VCS", icon: "bitbucket", filtered: false},
+    {name: "Confluence", category: ["t-a-t"], type: "Documentation", icon: "confluence", filtered: false},
+    {name: "Jira", category: ["t-a-t"], type: "Management", icon: "jira", filtered: false},
+    {name: "Ansible", category: ["t-a-t"], type: "IaC", icon: "ansible", filtered: false},
+    {name: "Docker", category: ["t-a-t"], type: "Containerization", icon: "docker", filtered: false},
+    {name: "Adobe XD", category: ["t-a-t"], type: "Photography", icon: "xd", filtered: false},
 
     {name: "CI/CD", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
     {name: "DevOps", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
@@ -129,7 +129,6 @@ function Skills() {
                         <motion.div custom={i}
                                     variants={variants}
                                     key={i}>
-                            <p>{i}</p>
                             <Skill
                                 name={skill.name}
                                 type={skill.type}
@@ -142,4 +141,5 @@ function Skills() {
         </div>
     )
 }
+
 export default Skills;
