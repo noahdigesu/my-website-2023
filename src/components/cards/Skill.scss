@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 35px 35px;
+  padding: 35px;
   width: 10em;
   gap: 10px;
   transform: translate3d(0, 20%, 0);
@@ -43,5 +43,11 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .skill {
+    padding: 20px;
   }
 }

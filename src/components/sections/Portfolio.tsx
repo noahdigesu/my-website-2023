@@ -44,6 +44,17 @@ const portfolio = [
         filtered: true
     },
     {
+        name: "Links",
+        year: 2022,
+        background_color: "#f4ffaf",
+        accent: "#8a8c61",
+        image: "links",
+        theme: "dark",
+        url: "https://noahdigesu.com/links",
+        category: ["design", "code"],
+        filtered: true
+    },
+    {
         name: "Portfolio",
         year: 2021,
         background_color: "#f1d2fb",
@@ -54,17 +65,6 @@ const portfolio = [
         category: ["design", "code"],
         filtered: true
     },
-    {
-        name: "Links",
-        year: 2022,
-        background_color: "#f4ffaf",
-        accent: "#8a8c61",
-        image: "links",
-        theme: "dark",
-        url: "https://noahdigesu.com/links",
-        category: ["design", "code"],
-        filtered: true
-    }
 ];
 
 function Projects() {

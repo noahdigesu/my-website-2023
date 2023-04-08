@@ -35,7 +35,7 @@ const fade = {
 function Header() {
     return (
         <header style={{backgroundImage: `url(${background})`}}>
-            <img src={logo} alt="Logo"/>
+            <img src={logo} alt="Logo" style={{height: "10em"}}/>
             <h2 className="title-main">FullStack | DevOps
             </h2>
             <div className="actions">

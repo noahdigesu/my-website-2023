@@ -13,7 +13,6 @@ function Filter(props: Props) {
         setActive(props.active)
     }, [props.active]);
 
-
     return (
         <span className={`filter ${isActive ? "active" : "inactive"} ${props.theme}`}
               onClick={() => setActive(!isActive)}>

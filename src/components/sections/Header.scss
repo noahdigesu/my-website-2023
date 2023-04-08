@@ -1,7 +1,6 @@
 header {
-  background-position: center center;
+  background-position: center 85%;
   background-repeat: no-repeat;
-  background-size: 100% 100vw;
   display: flex;
   row-gap: 2em;
   flex-direction: column;
@@ -26,5 +25,11 @@ header {
     display: flex;
     flex-direction: row;
     gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    background-size: auto;
   }
 }
