@@ -23,29 +23,48 @@ const variants = {
 }
 
 const skills = [
-    {name: "Laravel", category: "l-a-f", type: "Web", icon: "laravel", filtered: true},
-    {name: "JavaScript", category: "l-a-f", type: "Web", icon: "js", filtered: true},
-    {name: "SASS", category: "l-a-f", type: "Web", icon: "sass", filtered: true},
-    {name: "PHP", category: "l-a-f", type: "Web", icon: "php", filtered: true},
-    {name: "Spring", category: "l-a-f", type: "Web", icon: "spring", filtered: true},
-    {name: "Django", category: "l-a-f", type: "Web", icon: "django", filtered: true},
-    {name: "Node.js", category: "l-a-f", type: "Web", icon: "node", filtered: true},
-    {name: "REST APIs", category: "l-a-f", type: "Web", icon: "none", filtered: true},
-    {name: "Jest", category: "l-a-f", type: "Web", icon: "jest", filtered: true},
+    {name: "Laravel", category: ["l-a-f"], type: "Web", icon: "laravel", filtered: true},
+    {name: "JavaScript", category: ["l-a-f"], type: "Web", icon: "js", filtered: true},
+    {name: "SASS", category: ["l-a-f"], type: "Web", icon: "sass", filtered: true},
+    {name: "PHP", category: ["l-a-f"], type: "Web", icon: "php", filtered: true},
+    {name: "Spring", category: ["l-a-f"], type: "Web", icon: "spring", filtered: true},
+    {name: "Django", category: ["l-a-f"], type: "Web", icon: "django", filtered: true},
+    {name: "Node.js", category: ["l-a-f"], type: "Web", icon: "node", filtered: true},
+    {name: "REST APIs", category: ["l-a-f"], type: "Web", icon: "none", filtered: true},
+    {name: "Jest", category: ["l-a-f"], type: "Web", icon: "jest", filtered: true},
     {
         name: "WebdriverIO",
-        category: "l-a-f",
+        category: ["l-a-f"],
         type: "Web",
         icon: "webdriverio",
         filtered: true
     },
-    {name: "Kotlin", category: "l-a-f", type: "App", icon: "kotlin", filtered: true},
-    {name: "SQL", category: "l-a-f", type: "Other", icon: "none", filtered: true},
-    {name: "Java", category: "l-a-f", type: "Other", icon: "java", filtered: true},
-    {name: "Bash", category: "l-a-f", type: "Other", icon: "bash", filtered: true},
-    {name: "C++", category: "l-a-f", type: "Other", icon: "cpp", filtered: true},
-    {name: "C", category: "l-a-f", type: "Other", icon: "c", filtered: true},
-    {name: "Python", category: "l-a-f", type: "Other", icon: "python", filtered: true},
+    {name: "Kotlin", category: ["l-a-f"], type: "App", icon: "kotlin", filtered: true},
+    {name: "SQL", category: ["l-a-f"], type: "Other", icon: "none", filtered: true},
+    {name: "Java", category: ["l-a-f"], type: "Other", icon: "java", filtered: true},
+    {name: "Bash", category: ["l-a-f"], type: "Other", icon: "bash", filtered: true},
+    {name: "C++", category: ["l-a-f"], type: "Other", icon: "cpp", filtered: true},
+    {name: "C", category: ["l-a-f"], type: "Other", icon: "c", filtered: true},
+    {name: "Python", category: ["l-a-f"], type: "Other", icon: "python", filtered: true},
+
+    {name: "Linux", category: ["t-a-t"], type: "OS", icon: "tux", filtered: false},
+    {name: "Windows", category: ["t-a-t"], type: "OS", icon: "windows", filtered: false},
+    {name: "AWS", category: ["t-a-t"], type: "Other", icon: "aws", filtered: false},
+    {name: "Docker", category: ["t-a-t"], type: "Other", icon: "docker", filtered: false},
+    {name: "Figma", category: ["t-a-t"], type: "Other", icon: "figma", filtered: false},
+    {name: "GitHub", category: ["t-a-t"], type: "Other", icon: "github", filtered: false},
+    {name: "GitLab", category: ["t-a-t"], type: "Other", icon: "gitlab", filtered: false},
+    {name: "Bitbucket", category: ["t-a-t"], type: "Other", icon: "bitbucket", filtered: false},
+    {name: "Confluence", category: ["t-a-t"], type: "Other", icon: "confluence", filtered: false},
+    {name: "Jira", category: ["t-a-t"], type: "Other", icon: "jira", filtered: false},
+    {name: "Ansible", category: ["t-a-t"], type: "Other", icon: "ansible", filtered: false},
+    {name: "Adobe XD", category: ["t-a-t"], type: "Other", icon: "xd", filtered: false},
+
+    {name: "CI/CD", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
+    {name: "DevOps", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
+    {name: "Scrum", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
+    {name: "eXtreme programming", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
+    {name: "Pair programming", category: ["methodologies"], type: "Methodology", icon: "none", filtered: false},
 ];
 
 function Skills() {
@@ -53,17 +72,11 @@ function Skills() {
     const [_skills, setSkills] = useState(skills);
 
     useEffect(() => {
-        setSkills(skills);
-    }, []);
-
-    useEffect(() => {
         setSkills([]);
 
-        const filtered = skills.map(p => ({
-            ...p,
-            filtered: p.category.includes(filter)
-        }));
-        setSkills(filtered);
+        setSkills(skills.filter(
+            skill => skill.category.includes(filter)
+        ));
     }, [filter]);
 
     return (
@@ -112,20 +125,18 @@ function Skills() {
                 // viewport={{once: true, margin: "-150px 0px -150px 0px"}}
             >
                 <AnimatePresence>
-                    {_skills.map((skill, i) =>
-                        skill.filtered ? (
-                            <motion.div custom={i}
-                                        variants={variants}
-                                        key={i}>
-                                <Skill
-                                    name={skill.name}
-                                    category={skill.category}
-                                    type={skill.type}
-                                    icon={skill.icon}
-                                />
-                            </motion.div>
-                        ) : ""
-                    )}
+                    {_skills.map((skill, i) => (
+                        <motion.div custom={i}
+                                    variants={variants}
+                                    key={i}>
+                            <p>{i}</p>
+                            <Skill
+                                name={skill.name}
+                                type={skill.type}
+                                icon={skill.icon}
+                            />
+                        </motion.div>
+                    ))}
                 </AnimatePresence>
             </motion.div>
         </div>

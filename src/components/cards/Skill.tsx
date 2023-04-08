@@ -2,18 +2,16 @@ import "./Skill.scss";
 
 interface Props {
     name: string;
-    category: string;
     type: string;
     icon: string;
 }
 
 function Skill(props: Props) {
     return (
-        <div className="skill" data-category={props.category}>
-            <img
-                src={`/images/skills-logos/${props.icon}.png`}
-                alt={`${props.name} icon`}
+        <div className="skill">
+            <div
                 className="skill-icon"
+                style={{backgroundImage: `url(/images/skills-logos/${props.icon}.png)`}}
             />
             <span className="skill-name">{props.name}</span>
             <span className="skill-type">{props.type}</span>
