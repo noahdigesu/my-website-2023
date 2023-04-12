@@ -1,7 +1,7 @@
 import "./Projects.scss";
 
-import {AnimatePresence, motion} from "framer-motion";
-import React, {useEffect, useState} from "react";
+import {animate, AnimatePresence, motion, useInView} from "framer-motion";
+import React, {useEffect, useRef, useState} from "react";
 
 import Project from "../cards/Project";
 import Filter from "../buttons/Filter";
@@ -100,11 +100,9 @@ function Projects() {
             </div>
 
             <motion.div className="projects"
-                        initial="hidden"
-                // whileInView="visible"
+                        initial="visible"
                         animate="visible"
                         variants={variants}
-                // viewport={{once: true, margin: "-150px 0px -150px 0px"}}
             >
                 <AnimatePresence>
                     {projects.map((project, i) =>

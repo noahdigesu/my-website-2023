@@ -119,10 +119,8 @@ function Skills() {
 
             <motion.div className="skills"
                         initial="hidden"
-                // whileInView="visible"
                         animate="visible"
                         variants={variants}
-                // viewport={{once: true, margin: "-150px 0px -150px 0px"}}
             >
                 <AnimatePresence>
                     {_skills.map((skill, i) => (
