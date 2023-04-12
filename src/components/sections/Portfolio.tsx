@@ -50,7 +50,7 @@ const portfolio = [
         accent: "#8a8c61",
         image: "links",
         theme: "dark",
-        url: "https://noahdigesu.com/links",
+        url: "https://links.noahdigesu.com/",
         category: ["design", "code"],
         filtered: true
     },

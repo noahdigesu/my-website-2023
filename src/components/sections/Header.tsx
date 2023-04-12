@@ -52,7 +52,7 @@ function Header() {
                     <motion.div variants={social}>
                         <Social
                             icon="linkedin"
-                            url="https://twitter.com/noahdigesu"
+                            url="https://linkedin.com/in/noahdigesu"
                         />
                     </motion.div>
                     <motion.div variants={social}>
