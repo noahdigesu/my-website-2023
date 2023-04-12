@@ -100,7 +100,7 @@ function Projects() {
             </div>
 
             <motion.div className="projects"
-                        initial="visible"
+                        initial="hidden"
                         animate="visible"
                         variants={variants}
             >
