@@ -1,6 +1,7 @@
 import "./App.css";
 
 import {motion} from "framer-motion";
+import { inject } from '@vercel/analytics';
 
 import Header from "./components/sections/Header";
 import Projects from "./components/sections/Portfolio";
@@ -15,6 +16,8 @@ const fade = {
         opacity: 0
     }
 }
+
+inject();
 
 function App() {
     return (
