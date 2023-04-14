@@ -1,7 +1,7 @@
-import "./Projects.scss";
+import "./Portfolio.scss";
 
-import {animate, AnimatePresence, motion, useInView} from "framer-motion";
-import React, {useEffect, useRef, useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
+import React, {useEffect, useState} from "react";
 
 import Project from "../cards/Project";
 import Filter from "../buttons/Filter";
