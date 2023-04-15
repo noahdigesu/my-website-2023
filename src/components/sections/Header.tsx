@@ -5,7 +5,6 @@ import {motion} from "framer-motion";
 
 import "./Header.scss";
 
-import logo from "../../images/logo.svg";
 import background from "../../images/backgrounds/header.svg";
 
 const social = {
@@ -36,7 +35,7 @@ const fade = {
 function Header() {
     return (
         <header style={{backgroundImage: `url(${background})`}}>
-            <img src={logo} alt="Logo" style={{height: "10em"}}/>
+            <img src="/images/logo.svg" alt="Logo" style={{height: "10em"}}/>
             <h2 className="title-main">FullStack | DevOps<br />Designer</h2>
             <div className="actions">
                 <motion.div initial="hidden"
