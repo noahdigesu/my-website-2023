@@ -11,7 +11,7 @@ import background from "../../images/backgrounds/header.svg";
 const social = {
     hidden: {
         opacity: 0,
-        y: -20,
+        y: -30,
         display: "inherit"
     },
     visible: {
@@ -29,6 +29,7 @@ const fade = {
     visible: {
         opacity: 1,
         display: "inherit",
+        transition: {delay: 1, duration: .8}
     },
 }
 
@@ -40,14 +41,13 @@ function Header() {
             <div className="actions">
                 <motion.div initial="hidden"
                             animate="visible"
-                            variants={fade}
-                            transition={{delay: .7}}>
+                            variants={fade}>
                     <Discover/>
                 </motion.div>
                 <motion.div className="socials"
                             initial="hidden"
                             animate="visible"
-                            transition={{staggerChildren: 0.3, delayChildren: 1.5}}>
+                            transition={{staggerChildren: 0.3, delayChildren: 1.6}}>
                     <motion.div variants={social}>
                         <Social
                             icon="linkedin"

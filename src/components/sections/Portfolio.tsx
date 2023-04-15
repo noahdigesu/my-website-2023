@@ -10,7 +10,7 @@ import {Theme} from "../../types";
 const variants = {
     hidden: {
         opacity: 0,
-        y: 20
+        y: 30
     },
     visible: (i: number) => ({
         opacity: 1,

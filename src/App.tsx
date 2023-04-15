@@ -10,7 +10,7 @@ import Skills from "./components/sections/Skills";
 const fade = {
     visible: {
         opacity: 1,
-        transition: {duration: 1},
+        transition: {duration: 1, delay: .2},
     },
     hidden: {
         opacity: 0
