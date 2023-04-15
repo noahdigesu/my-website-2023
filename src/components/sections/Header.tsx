@@ -61,7 +61,12 @@ function Header() {
                             url="https://twitter.com/noahdigesu"
                         />
                     </motion.div>
-                    {/* <Social icon="dribbble" url="https://twitter.com/noahdigesu" /> */}
+                    <motion.div variants={social}>
+                        <Social
+                            icon="dribbble"
+                            url="https://dribbble.com/noahdigesu"
+                        />
+                    </motion.div>
                 </motion.div>
             </div>
         </header>

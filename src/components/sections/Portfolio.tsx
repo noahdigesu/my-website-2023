@@ -5,6 +5,7 @@ import React, {useEffect, useState} from "react";
 
 import Project from "../cards/Project";
 import Filter from "../buttons/Filter";
+import {Theme} from "../../types";
 
 const variants = {
     hidden: {
@@ -118,7 +119,7 @@ function Projects() {
                                     background_color={project.background_color}
                                     accent={project.accent}
                                     image={project.image}
-                                    theme={project.theme}
+                                    theme={project.theme as Theme}
                                     url={project.url}
                                 />
                             </motion.div>
