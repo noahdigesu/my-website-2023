@@ -10,9 +10,7 @@ interface Props {
 
 function Social(props: Props) {
     return (
-        <motion.a whileHover={{scale: 1.1}}
-                  whileTap={{scale: 1}}
-                  className="button-social"
+        <motion.a className="button-social"
                   href={props.url}
                   target="_blank"
                   rel="noopener noreferrer"
