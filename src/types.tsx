@@ -1,0 +1,2 @@
+export type Theme = "light" | "dark";
+export type ProjectType = "Web" | "Database" | "App" | "Software" | "Scripting" | "OS" | "Cloud" | "Design" | "VCS" | "Documentation" | "Management" | "IaC" | "Containerization" | "Photography" | "Methodology";

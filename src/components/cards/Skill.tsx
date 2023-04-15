@@ -1,8 +1,10 @@
 import "./Skill.scss";
 
+import {ProjectType} from "../../types";
+
 interface Props {
     name: string;
-    type: string;
+    type: ProjectType;
     icon: string;
 }
 

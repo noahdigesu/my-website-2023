@@ -7,6 +7,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import Filter from "../buttons/Filter";
 import Skill from "../cards/Skill";
 import React, {useEffect, useState} from "react";
+import {ProjectType} from "../../types";
 
 const variants = {
     hidden: {
@@ -129,7 +130,7 @@ function Skills() {
                                     key={skill.name + i}>
                             <Skill
                                 name={skill.name}
-                                type={skill.type}
+                                type={skill.type as ProjectType}
                                 icon={skill.icon}
                             />
                         </motion.div>

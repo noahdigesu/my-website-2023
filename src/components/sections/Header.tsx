@@ -36,7 +36,7 @@ function Header() {
     return (
         <header style={{backgroundImage: `url(${background})`}}>
             <img src={logo} alt="Logo" style={{height: "10em"}}/>
-            <h2 className="title-main">FullStack | DevOps
+            <h2 className="title-main">FullStack | DevOps | Designer
             </h2>
             <div className="actions">
                 <motion.div initial="hidden"
@@ -61,7 +61,12 @@ function Header() {
                             url="https://twitter.com/noahdigesu"
                         />
                     </motion.div>
-                    {/* <Social icon="dribbble" url="https://twitter.com/noahdigesu" /> */}
+                    <motion.div variants={social}>
+                        <Social
+                            icon="dribbble"
+                            url="https://dribbble.com/noahdigesu"
+                        />
+                    </motion.div>
                 </motion.div>
             </div>
         </header>
